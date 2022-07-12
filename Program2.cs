@@ -10,8 +10,8 @@ namespace array
     {
         static void Main(string[] args)
         {
-            int linesNumber = 30;
-            int[] numbersArray = new int[linesNumber];
+            int arraySise = 30;
+            int[] numbersArray = new int[arraySise];
             int randomMin = 1;
             int randomMax = 9;
             Random random = new Random();
