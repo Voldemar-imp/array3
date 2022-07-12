@@ -23,6 +23,7 @@ namespace array
                 numbersArray [i] = random.Next (randomMin, randomMax);
                 Console.Write(numbersArray[i]+" ");
             }
+            
             Console.WriteLine("- массив");
 
             for (int i = 0; i < numbersArray.Length; i++)
@@ -48,6 +49,7 @@ namespace array
                 {
                     Console.Write("  ");
                 }
+                
                 previousNumber = numbersArray[i];
             }
 
