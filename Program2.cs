@@ -20,28 +20,24 @@ namespace array
 
             for (int i = 0; i < numbersArray.Length; i++)
             {
-                numbersArray [i] = random.Next (randomMin, randomMax);
-                Console.Write(numbersArray[i]+" ");
+                numbersArray[i] = random.Next(randomMin, randomMax);
+                Console.Write(numbersArray[i] + " ");
             }
-            
+
             Console.WriteLine("- массив");
 
-            for (int i = 0; i < numbersArray.Length; i++)
+            if (numbersArray[0] > numbersArray[1])
             {
-                if (i != numbersArray.Length - 1)
-                {
-                    nextNumber = numbersArray[i + 1];
-                }
-                
-                if (i == 0 && numbersArray[i] > nextNumber)
-                {
-                    Console.Write(numbersArray[i] + " ");
-                }
-                else if (i == numbersArray.Length - 1 && numbersArray[i] > previousNumber)
-                {
-                    Console.Write(numbersArray[i] + " ");
-                }
-                else if (numbersArray[i] > nextNumber && numbersArray[i] > previousNumber)
+                Console.Write(numbersArray[0] + " ");
+            }                     
+            else
+            {
+                Console.Write("  ");
+            }
+
+            for (int i = 1; i < numbersArray.Length-1; i++)
+            {                 
+                if (numbersArray[i] > numbersArray[i+1] && numbersArray[i] > numbersArray[i - 1])
                 {
                     Console.Write(numbersArray[i] + " ");
                 }
@@ -49,8 +45,15 @@ namespace array
                 {
                     Console.Write("  ");
                 }
-                
-                previousNumber = numbersArray[i];
+            }
+
+            if (numbersArray[arraySise-1] > numbersArray[arraySise - 2])
+            {
+                Console.Write(numbersArray[arraySise - 1] + " ");
+            }            
+            else
+            {
+                Console.Write("  ");
             }
 
             Console.WriteLine("- локальные максимумы массива");
